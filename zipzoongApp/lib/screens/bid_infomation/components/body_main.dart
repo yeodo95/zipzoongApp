@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:zipzoongapp/size_config.dart';
 
-import '../../../bid_infomation/components/broker_info.dart';
+import 'broker_info.dart';
 
-class BodyBidInformation extends StatefulWidget {
-  const BodyBidInformation({Key? key}) : super(key: key);
+class BodyMain extends StatefulWidget {
+  const BodyMain({Key? key}) : super(key: key);
 
   @override
-  State<BodyBidInformation> createState() => _BodyBidInformationState();
+  State<BodyMain> createState() => _BodyMainState();
 }
 
-class _BodyBidInformationState extends State<BodyBidInformation> {
+class _BodyMainState extends State<BodyMain> {
   int LookUp = 0;
   int Bid = 0;
   @override

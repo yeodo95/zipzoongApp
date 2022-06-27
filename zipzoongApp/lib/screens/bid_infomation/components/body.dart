@@ -2,18 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:zipzoongapp/conponents/sliding_panel/custom_bottom_sheet.dart';
 import 'package:zipzoongapp/size_config.dart';
+import 'package:sliding_up_panel/sliding_up_panel.dart';
 
+import 'body_main.dart';
 import 'broker_info.dart';
 
 class Body extends StatefulWidget {
-  const Body({Key? key}) : super(key: key);
+  Body({Key? key}) : super(key: key);
 
   @override
-  State<Body> createState() => _BodyState();
+  BodyState createState() => BodyState();
 }
 
-class _BodyState extends State<Body> {
+class BodyState extends State<Body> {
   int LookUp = 0;
   int Bid = 0;
   @override
@@ -59,7 +62,6 @@ class _BodyState extends State<Body> {
               Stack(
                 children: <Widget>[
                   BrokerInfo(name: "홍길동"),
-                  BrokerInfo(name: "test"),
                 ],
               ),
             ],

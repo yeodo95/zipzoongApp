@@ -5,7 +5,6 @@ import 'package:zipzoongapp/conponents/bottom_nav_bar.dart';
 import 'package:zipzoongapp/conponents/custom_drawer.dart';
 import 'package:zipzoongapp/size_config.dart';
 
-import 'components/body/body_bid_information.dart';
 import 'components/body/body_dashboard.dart';
 import 'components/body/body_waiting_photo.dart';
 
@@ -23,21 +22,7 @@ class HomeState extends State<Home> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          AnimatedOpacity(
-            opacity: (currWidget == "WaitingPhoto" ? true : false) ? 1.0 : 0.0,
-            duration: const Duration(milliseconds: 200),
-            child: BodyWaitingPhoto(),
-          ),
-          AnimatedOpacity(
-            opacity:
-                (currWidget == "BidInformation" ? true : false) ? 1.0 : 0.0,
-            duration: const Duration(milliseconds: 200),
-            child: BodyBidInformation(),
-          ),
-        ],
-      ),
+      body: BodyWaitingPhoto(),
       bottomNavigationBar: BottomNavBar(),
       endDrawer: CustomDrawer(),
     );

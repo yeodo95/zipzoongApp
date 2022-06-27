@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Zipzoong Demo',
       theme: theme(),
-      initialRoute: "/loading",
+      initialRoute: "/",
       // routes: {
       //   "/": (context)=>Home(),
       //   "/first":(context)=>FirstNamedPage(),
