@@ -34,6 +34,7 @@ dependencies:
   sliding_up_panel: ^2.0.0+1    # sliding panel
   kpostal: ^0.4.2             # 카카오 주소 검색 서비스
   flutter_svg: ^1.1.0
+  device_info_plus: ^4.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
