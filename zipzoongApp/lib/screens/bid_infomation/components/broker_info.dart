@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:zipzoongapp/conponents/sliding_panel/custom_bottom_sheet.dart';
 import 'package:zipzoongapp/screens/bid_infomation/bid_infomation.dart';
@@ -15,7 +16,18 @@ class BrokerInfo extends StatefulWidget {
 
 class _BrokerInfoState extends State<BrokerInfo> {
   bool IsRequestComplete = false;
+  late ScrollController _scrollController;
   @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+  }
+
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
   Widget build(BuildContext context) {
     BidInfomationState? parent =
         context.findAncestorStateOfType<BidInfomationState>();
@@ -195,53 +207,65 @@ class _BrokerInfoState extends State<BrokerInfo> {
           child: Container(
             height: getProportionateScreenHeight(521),
             color: Colors.white,
-            child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 18),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Center(
-                    child: Container(
-                      width: getProportionateScreenWidth(48),
-                      height: getProportionateScreenHeight(8),
-                      margin: EdgeInsets.fromLTRB(0, 8, 0, 4),
-                      decoration: BoxDecoration(
-                        color: Color(0xffEEEEEE),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10),
+            child: SingleChildScrollView(
+              controller: _scrollController,
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 18),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Center(
+                      child: Container(
+                        width: getProportionateScreenWidth(48),
+                        height: getProportionateScreenHeight(8),
+                        margin: EdgeInsets.fromLTRB(0, 8, 0, 4),
+                        decoration: BoxDecoration(
+                          color: Color(0xffEEEEEE),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Container(
-                    color: Colors.yellow,
-                    width: double.infinity,
-                    height: getProportionateScreenHeight(128),
-                    child: InfoCard(),
-                  ),
-                  Container(
-                    width: double.infinity,
-                    height: getProportionateScreenHeight(152),
-                    margin: EdgeInsets.symmetric(horizontal: 6),
-                    color: Color(0xffEEEEEE),
-                  ),
-                  Text(
-                    "  연락받으실 번호",
-                    style: TextStyle(
-                        color: Colors.black87,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      setState(() {
-                        IsRequestComplete = !IsRequestComplete;
-                        Navigator.pop(context);
-                      });
-                    },
-                    child: Text("연락요청"),
-                  ),
-                ],
+                    Container(
+                      color: Colors.yellow,
+                      width: double.infinity,
+                      height: getProportionateScreenHeight(128),
+                      child: InfoCard(),
+                    ),
+                    Container(
+                      width: double.infinity,
+                      height: getProportionateScreenHeight(152),
+                      margin: EdgeInsets.symmetric(horizontal: 6),
+                      color: Color(0xffEEEEEE),
+                    ),
+                    Text(
+                      "  연락받으실 번호",
+                      style: TextStyle(
+                          color: Colors.black87,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    TextField(
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [
+                        FilteringTextInputFormatter.deny(RegExp('[0-9]'))
+                      ],
+                      onTap: () {
+                        // _scrollController.animateTo(120, duration: Duration(milliseconds: 500), curve: Curves.ease);
+                      },
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          IsRequestComplete = !IsRequestComplete;
+                          Navigator.pop(context);
+                        });
+                      },
+                      child: Text("연락요청"),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

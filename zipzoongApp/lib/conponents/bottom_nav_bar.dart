@@ -16,34 +16,32 @@ class BottomNavBar extends StatelessWidget {
     HomeState? parent = context.findAncestorStateOfType<HomeState>();
     return Container(
       color: Colors.white,
-      height: 72,
-      child: SafeArea(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            CustomIcon(
-              svgIcon: "assets/icons/Home Icon.svg",
-              text: "등록한 집",
-              press: () {
-                Get.toNamed("/dashboard");
-              },
-            ),
-            CustomIcon(
-              svgIcon: "assets/icons/Add Icon.svg",
-              text: "추가요청",
-              press: () {
-                Get.toNamed("/input");
-              },
-            ),
-            CustomIcon(
-              svgIcon: "assets/icons/Notification Icon.svg",
-              text: "알림",
-              press: () {
-                Scaffold.of(context).openEndDrawer();
-              },
-            ),
-          ],
-        ),
+      height: getProportionateScreenHeight(72),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          CustomIcon(
+            svgIcon: "assets/icons/Home Icon.svg",
+            text: "등록한 집",
+            press: () {
+              Get.toNamed("/dashboard");
+            },
+          ),
+          CustomIcon(
+            svgIcon: "assets/icons/Add Icon.svg",
+            text: "추가요청",
+            press: () {
+              Get.toNamed("/input");
+            },
+          ),
+          CustomIcon(
+            svgIcon: "assets/icons/Notification Icon.svg",
+            text: "알림",
+            press: () {
+              Scaffold.of(context).openEndDrawer();
+            },
+          ),
+        ],
       ),
     );
   }
