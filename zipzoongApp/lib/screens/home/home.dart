@@ -20,7 +20,6 @@ class HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return Scaffold(
       body: BodyWaitingPhoto(),
       bottomNavigationBar: BottomNavBar(),

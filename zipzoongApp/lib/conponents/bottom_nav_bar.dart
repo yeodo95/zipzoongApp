@@ -16,7 +16,7 @@ class BottomNavBar extends StatelessWidget {
     HomeState? parent = context.findAncestorStateOfType<HomeState>();
     return Container(
       color: Colors.white,
-      height: getProportionateScreenHeight(72),
+      height: 63,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [

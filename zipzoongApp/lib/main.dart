@@ -5,7 +5,9 @@ import 'package:flutter/services.dart'; //PlatformException 사용을 위한 패
 import 'package:device_info_plus/device_info_plus.dart'; // 디바이스 정보 사용 패키지
 
 import 'package:zipzoongapp/screens/bid_infomation/bid_infomation.dart';
+import 'package:zipzoongapp/screens/create/create.dart';
 import 'package:zipzoongapp/screens/dashboard/dashboard.dart';
+import 'package:zipzoongapp/size_config.dart';
 import 'package:zipzoongapp/theme.dart';
 import 'package:zipzoongapp/screens/initial/initial.dart';
 import 'package:zipzoongapp/screens/home/home.dart';
@@ -38,7 +40,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Zipzoong Demo',
       theme: theme(),
-      initialRoute: "/",
+      initialRoute: "/loading",
       // routes: {
       //   "/": (context)=>Home(),
       //   "/first":(context)=>FirstNamedPage(),
@@ -56,6 +58,10 @@ class _MyAppState extends State<MyApp> {
             transition: Transition.fadeIn),
         GetPage(
             name: "/input", page: () => Input(), transition: Transition.fadeIn),
+        GetPage(
+            name: "/create",
+            page: () => const Create(),
+            transition: Transition.fadeIn),
         GetPage(
             name: "/dashboard",
             page: () => Dashboard(),
