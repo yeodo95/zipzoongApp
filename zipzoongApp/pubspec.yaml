@@ -31,10 +31,13 @@ dependencies:
     sdk: flutter
   get: ^4.6.5
   flutter_spinkit: ^5.1.0       # progress bar
+  progress_indicator: ^0.2.2    # progress bar
   sliding_up_panel: ^2.0.0+1    # sliding panel
   kpostal: ^0.4.2             # 카카오 주소 검색 서비스
+  # remedi_kopo: ^0.0.1         # 카카오 주소 검색 서비스
   flutter_svg: ^1.1.0
   device_info_plus: ^4.0.0
+  webview_flutter: ^3.0.4       # webview 
 
 
   # The following adds the Cupertino Icons font to your application.

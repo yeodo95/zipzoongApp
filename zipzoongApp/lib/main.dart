@@ -8,6 +8,7 @@ import 'package:zipzoongapp/screens/bid_infomation/bid_infomation.dart';
 import 'package:zipzoongapp/screens/create/create.dart';
 import 'package:zipzoongapp/screens/dashboard/dashboard.dart';
 import 'package:zipzoongapp/size_config.dart';
+import 'package:zipzoongapp/test.dart';
 import 'package:zipzoongapp/theme.dart';
 import 'package:zipzoongapp/screens/initial/initial.dart';
 import 'package:zipzoongapp/screens/home/home.dart';
@@ -70,6 +71,8 @@ class _MyAppState extends State<MyApp> {
             name: "/bid_info",
             page: () => BidInfomation(),
             transition: Transition.fadeIn),
+        GetPage(
+            name: "/test", page: () => Test(), transition: Transition.fadeIn),
         // GetPage(name:"/second", page: ()=>SecondNamedPage(), transition: Transition.fadeIn),
       ],
     );
