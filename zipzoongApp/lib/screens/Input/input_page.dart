@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-import 'package:kpostal/kpostal.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:zipzoongapp/enum.dart';
 
@@ -307,6 +306,10 @@ class _InputState extends State<Input> {
           break;
         case InputType.structure:
           _title = "집 구조를 알려주세요";
+          panelHieght = 480.0;
+          break;
+        case InputType.picture:
+          _title = "사진 입력";
           panelHieght = 480.0;
           break;
         case InputType.end:

@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-import 'package:kpostal/kpostal.dart';
 
 class First extends StatelessWidget {
   const First({Key? key}) : super(key: key);
@@ -40,16 +39,16 @@ class First extends StatelessWidget {
                   ),
                   // onTap: () => {Get.toNamed("/input")},
                   onTap: () async {
-                    await Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          fullscreenDialog: false,
-                          builder: (_) => KpostalView(
-                            callback: (Kpostal result) {
-                              print("test ${result.address}");
-                            },
-                          ),
-                        ));
+                    // await Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //       fullscreenDialog: false,
+                    //       builder: (_) => KpostalView(
+                    //         callback: (Kpostal result) {
+                    //           print("test ${result.address}");
+                    //         },
+                    //       ),
+                    //     ));
                     // 입력했을 때 분기 처리
                     Get.toNamed("/input");
                   },

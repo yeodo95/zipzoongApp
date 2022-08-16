@@ -4,7 +4,7 @@ import 'package:zipzoongapp/contant.dart';
 ThemeData theme() {
   return ThemeData(
     scaffoldBackgroundColor: Color(0xff003BF7),
-    fontFamily: "Muli",
+    fontFamily: "PretendardVariable",
     appBarTheme: appBarTheme(),
     textTheme: textTheme(),
     inputDecorationTheme: inputDecorationTheme(),
@@ -34,7 +34,8 @@ TextTheme textTheme() {
   return TextTheme(
     bodyText1:
         TextStyle(color: kTextColor, fontWeight: FontWeight.w600, fontSize: 20),
-    bodyText2: TextStyle(color: kTextColor),
+    caption:
+        TextStyle(color: kTextColor, fontWeight: FontWeight.w400, fontSize: 14),
   );
 }
 

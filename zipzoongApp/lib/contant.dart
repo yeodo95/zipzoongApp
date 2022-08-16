@@ -56,5 +56,9 @@ const String ForSaleStatusText =
 const String ForSaleStatusInput =
     '{"WaitingPhoto":"사진 등록", "BiddingInProgress":"상세 조회","EndOfBidding":"집 정보 수정"}';
 
+const String ForCreateStepText =
+    '{"InputAddress":"당신의 집은 어디에 있나요?", "InputType":"어떻게 계약하길 원하시나요?","InputTypeDetail":"계약 방식을 알려주세요", "InputStructure":"당신의 집을 조금 더 알려주세요","UploadPhoto":"마지막이에요!사진을 올려주세요","EndOfInput":"등록 완료 지금부터 중개사 입찰이 시작됩니다" }';
+
 Map<String, dynamic> ForSaleText = jsonDecode(ForSaleStatusText);
 Map<String, dynamic> ForSaleInput = jsonDecode(ForSaleStatusInput);
+Map<String, dynamic> ForCreateText = jsonDecode(ForCreateStepText);
