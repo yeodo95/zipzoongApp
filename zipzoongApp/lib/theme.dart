@@ -6,6 +6,7 @@ ThemeData theme() {
     scaffoldBackgroundColor: Color(0xff003BF7),
     fontFamily: "PretendardVariable",
     appBarTheme: appBarTheme(),
+    primaryTextTheme: textTheme(),
     textTheme: textTheme(),
     inputDecorationTheme: inputDecorationTheme(),
     visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -32,8 +33,31 @@ InputDecorationTheme inputDecorationTheme() {
 
 TextTheme textTheme() {
   return TextTheme(
+    headline1: TextStyle(
+        color: kDisplayTextColor, fontWeight: FontWeight.w600, fontSize: 20),
+    headline2: TextStyle(
+        color: kDisplayTextColor, fontWeight: FontWeight.w400, fontSize: 15),
+    headline3: TextStyle(
+        color: kDisplayTextColor, fontWeight: FontWeight.w400, fontSize: 14),
+    bodyText1: TextStyle(
+        color: kBodyTextColor, fontWeight: FontWeight.w600, fontSize: 20),
+    bodyText2: TextStyle(
+        color: kBodyTextColor, fontWeight: FontWeight.w400, fontSize: 17),
+    caption: TextStyle(
+        color: kBodyTextColor, fontWeight: FontWeight.w400, fontSize: 14),
+    button: TextStyle(
+        color: kButtonColor, fontWeight: FontWeight.w400, fontSize: 17),
+    overline: TextStyle(
+        color: kDisplayTextColor, fontWeight: FontWeight.w400, fontSize: 17),
+  );
+}
+
+TextTheme buttonTextTheme() {
+  return TextTheme(
     bodyText1:
         TextStyle(color: kTextColor, fontWeight: FontWeight.w600, fontSize: 20),
+    bodyText2:
+        TextStyle(color: kTextColor, fontWeight: FontWeight.w400, fontSize: 17),
     caption:
         TextStyle(color: kTextColor, fontWeight: FontWeight.w400, fontSize: 14),
   );

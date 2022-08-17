@@ -9,8 +9,12 @@ const kPrimaryGradientColor = LinearGradient(
   end: Alignment.bottomRight,
   colors: [Color(0xFFFFA53E), Color(0xFFFF7643)],
 );
-const kSecondaryColor = Color(0xFF979797);
+const kSecondaryColor = Color(0xFF007AFF);
 const kTextColor = Color(0xFFFFFFFF);
+
+const kDisplayTextColor = Color(0xFFFFFFFF);
+const kBodyTextColor = Color(0xFFFFFFFF);
+const kButtonColor = Color(0xFF007AFF);
 
 const kAnimationDuration = Duration(milliseconds: 200);
 
@@ -62,3 +66,9 @@ const String ForCreateStepText =
 Map<String, dynamic> ForSaleText = jsonDecode(ForSaleStatusText);
 Map<String, dynamic> ForSaleInput = jsonDecode(ForSaleStatusInput);
 Map<String, dynamic> ForCreateText = jsonDecode(ForCreateStepText);
+
+List<Map<String, dynamic>> rentType = [
+  {'state': '월세', 'isCheck': 'false'},
+  {'state': '전세', 'isCheck': 'false'},
+  {'state': '매매', 'isCheck': 'false'}
+];

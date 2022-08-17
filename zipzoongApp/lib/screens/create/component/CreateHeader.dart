@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:progress_indicator/progress_indicator.dart';
 import 'package:zipzoongapp/contant.dart';
+import 'package:zipzoongapp/enum.dart';
 import 'package:zipzoongapp/screens/create/component/step_01.dart';
 import 'package:zipzoongapp/size_config.dart';
 
@@ -109,14 +110,14 @@ class _CreateHeaderState extends State<CreateHeader>
                     ),
                   ),
                   SizedBox(
-                    height: 65,
+                    height: getProportionateScreenHeight(65),
                   ),
                   Visibility(
-                    visible: true,
-                    // visible: CreateStepType.values[currStep] ==
-                    //         CreateStepType.step_01
-                    //     ? true
-                    //     : false,
+                    // visible: true,
+                    visible: CreateStepType.values[widget.currStep] ==
+                            CreateStepType.step_01
+                        ? true
+                        : false,
                     child: Step_01(),
                   ),
                 ],

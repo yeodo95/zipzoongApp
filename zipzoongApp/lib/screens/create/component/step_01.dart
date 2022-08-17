@@ -23,7 +23,7 @@ class Step_01 extends StatelessWidget {
       children: [
         Text(
           "당신의 집은 어디에 있나요?",
-          style: Theme.of(context).textTheme.bodyLarge,
+          style: Theme.of(context).primaryTextTheme.bodyLarge,
         ),
         SizedBox(
           height: 8,
