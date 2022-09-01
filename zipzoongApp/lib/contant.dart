@@ -14,6 +14,7 @@ const kTextColor = Color(0xFFFFFFFF);
 
 const kDisplayTextColor = Color(0xFFFFFFFF);
 const kBodyTextColor = Color(0xFFFFFFFF);
+const kBottomSheetTextColor = Color(0xff000000);
 const kButtonColor = Color(0xFF007AFF);
 
 const kAnimationDuration = Duration(milliseconds: 200);

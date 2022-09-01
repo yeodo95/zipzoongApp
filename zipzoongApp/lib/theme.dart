@@ -49,6 +49,23 @@ TextTheme textTheme() {
         color: kButtonColor, fontWeight: FontWeight.w400, fontSize: 17),
     overline: TextStyle(
         color: kDisplayTextColor, fontWeight: FontWeight.w400, fontSize: 17),
+    subtitle1: TextStyle(
+        color: kBottomSheetTextColor,
+        fontWeight: FontWeight.w600,
+        fontSize: 20),
+  );
+}
+
+TextTheme bottomSheetTextTheme() {
+  return TextTheme(
+    bodyText1: TextStyle(
+        color: kBottomSheetTextColor,
+        fontWeight: FontWeight.w600,
+        fontSize: 20),
+    bodyText2:
+        TextStyle(color: kTextColor, fontWeight: FontWeight.w400, fontSize: 17),
+    caption:
+        TextStyle(color: kTextColor, fontWeight: FontWeight.w400, fontSize: 14),
   );
 }
 
