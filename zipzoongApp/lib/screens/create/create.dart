@@ -27,6 +27,13 @@ class CreateInfoState extends State<Create> with TickerProviderStateMixin {
     print("currStep: $currStep, maxStep: $maxStep");
   }
 
+  void PrevStep() {
+    setState(() {
+      if (currStep != 0) currStep--;
+    });
+    print("currStep: $currStep, maxStep: $maxStep");
+  }
+
   // void showBottomSheet() async {
   //   showModalBottomSheet(
   //     backgroundColor: Colors.transparent,

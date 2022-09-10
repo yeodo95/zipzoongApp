@@ -16,7 +16,7 @@ const kDisplayTextColor = Color(0xFFFFFFFF);
 const kBodyTextColor = Color(0xFFFFFFFF);
 const kBottomSheetTextColor = Color(0xff000000);
 const kButtonColor = Color(0xFF007AFF);
-
+const kInputBoxTextColor = Colors.black;
 const kAnimationDuration = Duration(milliseconds: 200);
 
 final headingStyle = TextStyle(
@@ -71,5 +71,49 @@ Map<String, dynamic> ForCreateText = jsonDecode(ForCreateStepText);
 List<Map<String, dynamic>> rentType = [
   {'state': '월세', 'isCheck': 'false'},
   {'state': '전세', 'isCheck': 'false'},
-  {'state': '매매', 'isCheck': 'false'}
+  {'state': '매매', 'isCheck': 'false'},
+];
+
+List<Map<String, dynamic>> houseType = [
+  {'state': '주택', 'isCheck': 'false'},
+  {'state': '빌라', 'isCheck': 'false'},
+  {'state': '아파트', 'isCheck': 'false'},
+  {'state': '오피스텔', 'isCheck': 'false'},
+];
+
+List<Map<String, dynamic>> floorType = [
+  {'state': '반지하', 'isCheck': 'false'},
+  {'state': '1층', 'isCheck': 'false'},
+  {'state': '2-5층', 'isCheck': 'false'},
+  {'state': '6층 이상', 'isCheck': 'false'},
+  {'state': '옥탑', 'isCheck': 'false'},
+];
+
+List<Map<String, dynamic>> numberOfRooms = [
+  {'state': '원룸', 'isCheck': 'false'},
+  {'state': '1.5룸', 'isCheck': 'false'},
+  {'state': '투룸', 'isCheck': 'false'},
+  {'state': '쓰리룸', 'isCheck': 'false'},
+  {'state': '포룸 이상', 'isCheck': 'false'},
+];
+
+List<Map<String, dynamic>> numberOfToilets = [
+  {'state': '화장실 1개', 'isCheck': 'false'},
+  {'state': '화장실 2개', 'isCheck': 'false'},
+];
+
+List<Map<String, dynamic>> duplex = [
+  {'state': '복층', 'isCheck': false},
+];
+
+List<Map<String, dynamic>> option = [
+  {'state': '에어컨', 'isCheck': false},
+  {'state': '냉장고', 'isCheck': false},
+  {'state': '붙박이장', 'isCheck': false},
+  {'state': '가스레인지', 'isCheck': false},
+  {'state': '세탁기', 'isCheck': false},
+  {'state': 'TV', 'isCheck': false},
+  {'state': '전자레인지', 'isCheck': false},
+  {'state': '침대', 'isCheck': false},
+  {'state': '책상', 'isCheck': false},
 ];

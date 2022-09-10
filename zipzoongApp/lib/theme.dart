@@ -4,7 +4,7 @@ import 'package:zipzoongapp/contant.dart';
 ThemeData theme() {
   return ThemeData(
     scaffoldBackgroundColor: Color(0xff003BF7),
-    fontFamily: "PretendardVariable",
+    // fontFamily: "Noto_Sans_KR",
     appBarTheme: appBarTheme(),
     primaryTextTheme: textTheme(),
     textTheme: textTheme(),
@@ -32,7 +32,7 @@ InputDecorationTheme inputDecorationTheme() {
 }
 
 TextTheme textTheme() {
-  return TextTheme(
+  return const TextTheme(
     headline1: TextStyle(
         color: kDisplayTextColor, fontWeight: FontWeight.w600, fontSize: 20),
     headline2: TextStyle(
@@ -53,11 +53,19 @@ TextTheme textTheme() {
         color: kBottomSheetTextColor,
         fontWeight: FontWeight.w600,
         fontSize: 20),
+    subtitle2: TextStyle(
+        color: kBottomSheetTextColor,
+        fontWeight: FontWeight.w400,
+        fontSize: 17),
+    headline4: TextStyle(
+        color: kBottomSheetTextColor,
+        fontWeight: FontWeight.w600,
+        fontSize: 16),
   );
 }
 
 TextTheme bottomSheetTextTheme() {
-  return TextTheme(
+  return const TextTheme(
     bodyText1: TextStyle(
         color: kBottomSheetTextColor,
         fontWeight: FontWeight.w600,
@@ -66,6 +74,8 @@ TextTheme bottomSheetTextTheme() {
         TextStyle(color: kTextColor, fontWeight: FontWeight.w400, fontSize: 17),
     caption:
         TextStyle(color: kTextColor, fontWeight: FontWeight.w400, fontSize: 14),
+    overline: TextStyle(
+        color: kInputBoxTextColor, fontWeight: FontWeight.w700, fontSize: 10),
   );
 }
 
